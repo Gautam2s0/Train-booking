@@ -3,3 +3,4 @@ const seatSchema = new mongoose.Schema({
   row: { type: Number, required: true },
   isBooked: { type: Boolean, default: false },
 }); 
+ 
