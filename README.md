@@ -27,12 +27,7 @@ Train Booking is a MERN stack application that allows users to book seat for a t
   <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
     <img src="https://miro.medium.com/max/1400/0*EitUXT-pqbaQSCTt.gif" alt="react" width="80" height="80"/>
   </a> 
-  <a href="https://redux.js.org" target="_blank" > 
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" alt="redux" width="80" height="80"/>
-  </a>
-  <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"> 
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="80" height="80"/>
-  </a>
+  
   <a href="https://chakra-ui.com/" target="_blank" rel="noreferrer"> 
     <img src="https://images.opencollective.com/chakra-ui-pro/61bd1dd/logo/256.png" alt="css3" width="80" height="80"/>
   </a>
@@ -49,4 +44,4 @@ Train Booking is a MERN stack application that allows users to book seat for a t
   <a href="https://git-scm.com/" target="_blank" rel="noreferrer" >
     <img src="https://media0.giphy.com/media/kH1DBkPNyZPOk0BxrM/giphy.gif?cid=ecf05e470no9trasqeqdbjyuoz2ogmvkqprbqfn78o5kbyte&rid=giphy.gif&ct=s" alt="git" width="80" height="80"/>
   </a>
-
+</p>
