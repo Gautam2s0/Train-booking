@@ -47,3 +47,28 @@ Train Booking is a MERN stack application that allows users to book seat for a t
     <img src="https://media0.giphy.com/media/kH1DBkPNyZPOk0BxrM/giphy.gif?cid=ecf05e470no9trasqeqdbjyuoz2ogmvkqprbqfn78o5kbyte&rid=giphy.gif&ct=s" alt="git" width="50" height="50"/>
   </a>
 </p>
+
+
+train-booking/
+├── backend/
+│ ├── Models/
+│ │ └── trainModel.js
+│ ├── Routes/
+│ │ └── trainRoutes.js
+│
+├── frontend/
+│ ├── public/
+│ │ ├── index.html
+│ │ └── manifest.json
+│ ├── src/
+| | ├──Components
+| | | └──Pages
+| | | | └──Train.jsx
+| | | ├──Images  
+│ │ ├── App.js
+│ │ ├── index.css
+│ │ └── index.js
+│ 
+│ 
+├── .gitignore
+└── README.md
