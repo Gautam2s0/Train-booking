@@ -71,7 +71,5 @@ train-booking/
 │ │ ├── App.js
 │ │ ├── index.css
 │ │ └── index.js
-│ 
-│ 
 ├── .gitignore
 └── README.md
