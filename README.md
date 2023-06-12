@@ -2,6 +2,7 @@
 Train -booking System
 
 <img src="./frontend/src/Images/homeimage.png" alt="html5" />
+<img src="./frontend/src/Images/img2.png" alt="html5" />
 
 Train Booking is a MERN stack application that allows users to book seat for a train. The app includes an attractive UI and multiple features.
 
