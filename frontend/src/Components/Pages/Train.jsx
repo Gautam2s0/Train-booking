@@ -281,11 +281,7 @@ export const Train = () => {
 };
 
 
-{/* <Button
-                  color={"#fff"}
-                  bg={"#00008B"}
-                  p="1% 3%"
-                  _hover={{
+
                     color: "#fff",
                     backgroundColor: "#2F4F4F",
                   }}
