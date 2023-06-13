@@ -275,7 +275,6 @@ export const Train = () => {
         </Stack>
         
     
-    
     </Stack>
   );
 };
