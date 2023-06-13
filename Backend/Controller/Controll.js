@@ -11,7 +11,6 @@ function markSeatsAsBooked(seats, bookedSeats) {
     return seats
   }
 
-  
   function findAvailableSeats(seats,nums){
     let ans=[],row=seats[0].row
 
