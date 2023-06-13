@@ -282,9 +282,7 @@ export const Train = () => {
 
 
 
-                    color: "#fff",
-                    backgroundColor: "#2F4F4F",
-                  }}
+                   
                   mr={"5%"}
                  onClick={HadndleReset}
                   isDisabled={display}
