@@ -11,7 +11,7 @@ router.post("/", async (req, res) => {
   const numSeats = parseInt(req.body.numSeats);
 //  Find All Seats
   let train = await Train.findOne();
-  
+ 
   try {
     if (!numSeats || numSeats < 1 || numSeats > 7) {
       return res
@@ -24,16 +24,16 @@ router.post("/", async (req, res) => {
 
     // Find the All Seats which are not booked
     let notBooked=train.coach.seats.filter((el)=>el.isBooked===false) 
-
+    if(notBooked.length<numSeats||notBooked.length==0){
+      return res.status(400).send({ message: "No seats available" });
+    }
     // Find the available seats for the requested number of seats
     let availableSeats = findAvailableSeats(notBooked,numSeats)
     
- 
-    if (availableSeats.length <= 0||availableSeats.length<numSeats||notBooked.length<numSeats) { 
+    if (availableSeats.length <= 0||availableSeats.length<numSeats) { 
       return res.status(400).send({ message: "No seats available" });
     }
 
-    
     // Marking Seat as booked which  seats are booked
     let marks= markSeatsAsBooked(train.coach.seats, availableSeats);
 
