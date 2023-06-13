@@ -1,10 +1,11 @@
 const express = require("express");
 const { Train } = require("../Models/trainModel");
 const { Mongoose, default: mongoose } = require("mongoose");
-const {findAvailableSeats,markSeatsAsBooked} =require("../Controller/Controll")
+const {findAvailableSeats,markSeatsAsBooked, markAllSeatsAsAvailabale} =require("../Controller/Controll")
 
 const router = express.Router();
 
+// Booking Seats 
 router.post("/", async (req, res) => {
     //  Nubmer of seats which is requested for booking
   const numSeats = parseInt(req.body.numSeats);
@@ -45,6 +46,8 @@ router.post("/", async (req, res) => {
     res.status(500).send(err);
   }
 });
+
+// Getting All seats
 router.get("/", async (req, res) => {
   try {
     const train = await Train.findOne()
@@ -54,7 +57,28 @@ router.get("/", async (req, res) => {
   }
 });
 
-
+// Reset all Seats
+router.post("/reset", async (req, res) => {
+   //  Find All Seats
+     let train = await Train.findOne();
+   
+     try {
+       
+       if (!train) {
+         return res.status(404).send({ message: "Train not found" });
+       }
+   
+       let AllavailableSeats = markAllSeatsAsAvailabale(train.coach.seats)
+       
+       // Modifing  the seats After reset
+       train.coach.seats=AllavailableSeats
+       await train.save()
+       res.send({ seats: AllavailableSeats });
+     } 
+     catch (err) {
+       res.status(500).send(err);
+     }
+});
 
 
 

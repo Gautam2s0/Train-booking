@@ -45,6 +45,14 @@ function markSeatsAsBooked(seats, bookedSeats) {
     
   }
 
+  function markAllSeatsAsAvailabale(seats) {
+    for (let el of seats) {
+        el.isBooked=false
+    }
+    
+    return seats
+  }
+
   module.exports={
-    markSeatsAsBooked,findAvailableSeats
+    markSeatsAsBooked,findAvailableSeats,markAllSeatsAsAvailabale
   }

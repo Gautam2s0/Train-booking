@@ -13,11 +13,11 @@ app.get("/",(req,res)=>{
 app.use("/train",router)
 app.listen(port=process.env.port||8080,async(req,res)=>{
     try{
-        await connection
+        await connection 
         console.log('connected to DB')
     }
     catch(err){
-        console.log(err)
+        console.log(err) 
     }
     console.log("server is running on ", port)
 })
