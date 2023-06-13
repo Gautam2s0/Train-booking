@@ -64,7 +64,7 @@ export const Train = () => {
     margin={"auto"}
     mt="20%"
     thickness='6px'
-    speed="0.30s"
+    speed="0.90s"
     emptyColor="gray.200"
     color="blue.500"
     size="xl"
