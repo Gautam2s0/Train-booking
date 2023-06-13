@@ -282,10 +282,5 @@ export const Train = () => {
 
 
 
-                   
-                  mr={"5%"}
-                 onClick={HadndleReset}
-                  isDisabled={display}
-                >
-                  Reset
+                 
                 </Button> */}
