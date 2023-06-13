@@ -73,7 +73,7 @@ router.post("/reset", async (req, res) => {
        // Modifing  the seats After reset
        train.coach.seats=AllavailableSeats
        await train.save()
-       res.send({ seats: AllavailableSeats });
+       res.send({ message: "All Seats are Available now" });
      } 
      catch (err) {
        res.status(500).send(err);
