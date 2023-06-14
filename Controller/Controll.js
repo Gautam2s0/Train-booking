@@ -8,7 +8,7 @@ function markSeatsAsBooked(seats, bookedSeats) {
         }
       });
     }
-    return seats
+    return seats 
   }
 
   function findAvailableSeats(seats,nums){
