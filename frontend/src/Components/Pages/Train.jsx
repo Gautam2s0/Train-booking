@@ -22,19 +22,23 @@ export const Train = () => {
   const [value, setValue] = useState("");
   const [display, setDisPlay] = useState(false);
   const [change, setChange] = useState(false);
-  const [message,setMassage]=useState("you are only allowed to book 1-7 seats")
+  const [message,setMassage]=useState("You are only allowed to book 1-7 seats")
+  const [loading,setLoading]=useState(null)
+  const [reset,setReset]=useState(null)
 
-  const url = `https://rose-busy-donkey.cyclic.app/train`;
+  const url = `https://light-pea-coat-pig.cyclic.app/train`;
 
 //  Booking seats
   const BookSeats = async () => {
-    console.log(+value)
-      axios
+    setLoading(true)       
+    axios
         .post(url, { numSeats: +value })
         .then((res) => {
           let seats=res.data.seats.map((el)=>el.number)
           setChange(!change);
           console.log({data:res.data})
+          setLoading(false)
+
         })
         .catch((err) => {
           console.log({err:err.response.data.message});
@@ -43,8 +47,10 @@ export const Train = () => {
   };
   //  handle Resete for  available for all seats
   const HadndleReset=()=>{
+    setReset(true)
     axios.post(`${url}/reset`).then((res)=>{
       console.log(res.data)
+      setReset(false)
     })
     .catch((err)=>{
       console.log(err)
@@ -183,6 +189,8 @@ export const Train = () => {
                   mr={"5%"}
                   onClick={BookSeats}
                   isDisabled={display}
+                  isLoading={loading}
+                  loadingText='Booking'
                 >
                   Book Seats
                 </Button>
@@ -196,7 +204,8 @@ export const Train = () => {
                 }}
                 mr={"5%"}
                onClick={HadndleReset}
-                isDisabled={display}
+                isLoading={reset}
+                  loadingText='Reseting'
                 >
                   Reset
                 </Button>
